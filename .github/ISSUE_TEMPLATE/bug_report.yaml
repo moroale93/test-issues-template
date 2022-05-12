@@ -1,0 +1,199 @@
+name: Request for Comment (RFC) - Code Standards/Patterns
+description: Issue template for starting a code standards RFC
+title: "[RFC] - YOUR TITLE HERE"
+labels: [RFC]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # RFC [YOUR TITLE HERE]
+        ##### Front End Guild Request for Comments - Code Standards/Patterns
+
+        ## Problem
+
+        Code standards/patterns MUST be created to address a specific and demonstrable
+        problem that is present (or likely to arise) in the codebase. Describe the
+        problem here that you would like to solve in as much detail as possible. Include
+        links to any relevant supporting documentation. The more evidence you present
+        here that there is a problem worth solving, the more convincing your RFC will
+        be.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem text
+      placeholder: Enter your problem text here
+    validations:
+      required: true
+
+  - type: markdown
+      attributes:
+        value: |
+          **Example:**
+
+          JavaScript array convenience methods are being overused in the frontend
+          codebase, leading to inefficient and slow code. A [recent survey](http://www.surveymonkey.com)
+          showed that 97% of Momentive engineers had noticed degraded performance
+          as a result of overuse of such methods.
+
+          ## Proposed Standard
+
+          Every identified problem should first be addressed by adding an entry to the
+          code standards/patterns documentation. This should describe the technical
+          solution to the problem.
+
+          The standard should describe how some technical task COULD, SHOULD or MUST be
+          achieved/coded/implemented. This section is NOT for describing the method of
+          enforcement of the standard (for example, if a lint rule, educational program,
+          or library is proposed, add it to subsequent sections, not this one).
+
+          Standards MUST use passive language, NOT first- or second-person, and MUST
+          include AT LEAST one example. Code blocks and code/pseudocode MUST be included
+          where possible.
+
+  - type: textarea
+      id: standard
+      attributes:
+        label: Proposed standard text
+        placeholder: Enter your proposed standard text here
+      validations:
+        required: true
+
+  - type: markdown
+      attributes:
+        value: |
+          **Example:**
+
+          Loops MUST be limited to the minimum possible number. A given array or other
+          iterable SHOULD only be iterated through once over the course of a given
+          operation, with all operations requiring such iteration to be performed on a
+          single iteration.
+
+          Examples:
+
+          ```typescript
+          // ❌ Too many iterations
+
+          const item1 = iterable.find(i => i === 4);
+          const item2 = iterable.find(i => i === 6);
+          ```
+
+          ```typescript
+          // ✅ Compliant
+
+          const { item1, item2 } = iterable.reduce(({...items}, i) => {
+            const r = { ...items };
+            if (i === 4) {
+              r.item1 = i;
+            } else if (i === 6) {
+              r.item2 = i;
+            }
+            return r;
+          }, {});
+          ```
+
+          ```typescript
+          // ✅ Compliant
+
+          let item1;
+          let item2;
+
+          for (const i of iterable) {
+            if (i === 4) {
+              item1 = i;
+            } else if (i === 6) {
+              item2 = i;
+            }
+          }
+          ```
+
+          ## Proposed Enforcement
+
+          Wherever possible, a proposal for an enforcement plan MUST be included. Examples
+          might include a new lint rule to block merging code with violations, a GitHub
+          team and review requirement to be added to a certain repo/directory, or any
+          other means of enforcement. An automated means of enforcement MUST be included
+          if possible.
+
+  - type: textarea
+      id: enforcement
+      attributes:
+        label: Proposed enforcement text
+        placeholder: Enter your proposed enforcement text here
+      validations:
+        required: true
+
+  - type: markdown
+      attributes:
+        value: |
+          **Example:**
+
+          A new lint rule that detects multiple iterations on the same symbol (variable)
+          within the same code block. Generates an error if multiple iterations are
+          detected.
+
+          ## Proposed Shared Code Library
+
+          Wherever possible, a proposal for a shared code library MUST be included. This
+          makes enforcement of the code standard exponentially easier, because instead of
+          having to learn, remember, and continually implement a new pattern, developers
+          can simply import utilities from the shared library and call them; additionally,
+          this promotes consistency as the specific implementation is controlled by the
+          library owners and cannot be deviated from.
+
+          Describe the proposed shared code library (or addition to an existing library)
+          here, or simply replace all this text with "N/A" if no shared code is proposed.
+
+  - type: textarea
+      id: library
+      attributes:
+        label: Proposed shared code library text
+        placeholder: Enter your proposed shared code library text here
+      validations:
+        required: true
+
+  - type: markdown
+      attributes:
+        value: |
+          **Example:**
+
+          A set of new array utilities to be added to [@sm/utils](https://code.corp.surveymonkey.com/webplatform/smpackages/tree/master/packages/utils):
+
+          - superLoop() - loops through an iterable super fast, executing a callback on
+          each item
+          - superFind() - finds multiple values in a single iteration
+
+          ## Proposed Education/Discoverability Program
+
+          Every standard MUST have a proposed education/discoverability program. It is
+          important to ensure that the organization learns about the new standard, and
+          how to become compliant.
+
+          In the case of an automated lint rule creation, this could be as simple as one
+          or more scheduled Slack posts in a particular channel, accompanied by a verbose
+          lint alert text content which includes a link to the standard (the linter will
+          ensure that everyone discovers the rule).
+
+          If enforcement is not automated, an educational proposal MUST be included.
+          Education can consist of a short tutorial (in which case both text and video
+          versions MUST be included). The educational resources MUST be added to the Guild
+          documentation platform and somehow disseminated throughout the organization.
+
+  - type: textarea
+      id: library
+      attributes:
+        label: Proposed shared code library text
+        placeholder: Enter your proposed shared code library text here
+      validations:
+        required: true
+
+  - type: markdown
+      attributes:
+        value: |
+          **Example:**
+
+          - tutorial article/video in the [arrays section](http://insert-link.here) of the
+          documentation, demonstrating:
+            - the new lint rule in action
+            - usage and examples of the new array utilities
+          - 3 scheduled Slack posts in #engineering linking the new standard
