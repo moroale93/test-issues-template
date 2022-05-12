@@ -26,31 +26,6 @@ body:
     validations:
       required: true
 
-  - type: markdown
-      attributes:
-        value: |
-          **Example:**
-
-          JavaScript array convenience methods are being overused in the frontend
-          codebase, leading to inefficient and slow code. A [recent survey](http://www.surveymonkey.com)
-          showed that 97% of Momentive engineers had noticed degraded performance
-          as a result of overuse of such methods.
-
-          ## Proposed Standard
-
-          Every identified problem should first be addressed by adding an entry to the
-          code standards/patterns documentation. This should describe the technical
-          solution to the problem.
-
-          The standard should describe how some technical task COULD, SHOULD or MUST be
-          achieved/coded/implemented. This section is NOT for describing the method of
-          enforcement of the standard (for example, if a lint rule, educational program,
-          or library is proposed, add it to subsequent sections, not this one).
-
-          Standards MUST use passive language, NOT first- or second-person, and MUST
-          include AT LEAST one example. Code blocks and code/pseudocode MUST be included
-          where possible.
-
   - type: textarea
       id: standard
       attributes:
