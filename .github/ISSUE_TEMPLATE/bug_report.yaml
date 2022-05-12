@@ -23,6 +23,8 @@ body:
     attributes:
       label: Problem text
       placeholder: Enter your problem text here
+    validations:
+      required: true
 
   - type: markdown
       attributes:
