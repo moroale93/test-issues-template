@@ -6,7 +6,6 @@ body:
   - type: markdown
     attributes:
       value: |
-        # RFC [YOUR TITLE HERE]
         ##### Front End Guild Request for Comments - Code Standards/Patterns
 
   - type: markdown
@@ -175,6 +174,9 @@ body:
         each item
         - superFind() - finds multiple values in a single iteration
 
+  - type: markdown
+    attributes:
+      value: |
         ## Proposed Education/Discoverability Program
 
         Every standard MUST have a proposed education/discoverability program. It is
