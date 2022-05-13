@@ -180,16 +180,16 @@ body:
           documentation platform and somehow disseminated throughout the organization.
 
   - type: textarea
-      id: library
-      attributes:
-        label: Proposed shared code library text
-        placeholder: Enter your proposed shared code library text here
-      validations:
-        required: true
+    id: tutorials
+    attributes:
+      label: Proposed tutorials
+      placeholder: Enter your tutorials
+    validations:
+      required: true
 
   - type: markdown
-      attributes:
-        value: |
+    attributes:
+      value: |
           **Example:**
 
           - tutorial article/video in the [arrays section](http://insert-link.here) of the
