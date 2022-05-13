@@ -52,12 +52,12 @@ body:
           where possible.
 
   - type: textarea
-      id: standard
-      attributes:
-        label: Proposed standard text
-        placeholder: Enter your proposed standard text here
-      validations:
-        required: true
+    id: standard
+    attributes:
+      label: Proposed standard text
+      placeholder: Enter your proposed standard text here
+    validations:
+      required: true
 
   - type: markdown
       attributes:
