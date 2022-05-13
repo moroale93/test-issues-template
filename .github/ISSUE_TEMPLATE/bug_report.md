@@ -1,38 +1,29 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: ''
+name: Request for Comment (RFC) - Code Standards/Patterns
+about: Issue template for starting a code standards RFC
+title: '[RFC] - YOUR TITLE HERE'
 labels: 'RFC'
-assignees: ''
+assignees: '@frontend/standards'
 
 ---
+# RFC [YOUR TITLE HERE]
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+## Problem
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+[Enter your problem text here]
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+## Proposed Standard
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+[Enter your proposed standard text here]
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+## Proposed Enforcement
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+[Enter your proposed enforcement text here]
 
-**Additional context**
-Add any other context about the problem here.
+## Proposed Shared Code Library
+
+[Enter your proposed shared code library text here]
+
+## Proposed Education/Discoverability Program
+
+[Enter your proposed education/discoverability program text here]
