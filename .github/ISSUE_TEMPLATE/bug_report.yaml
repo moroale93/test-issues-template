@@ -54,14 +54,19 @@ body:
   - type: textarea
       id: standard
       attributes:
+      
+      
+  - type: textarea
+    id: standard
+    attributes:
         label: Proposed standard text
         placeholder: Enter your proposed standard text here
-      validations:
+    validations:
         required: true
 
   - type: markdown
-      attributes:
-        value: |
+    attributes:
+      value: |
           **Example:**
 
           Loops MUST be limited to the minimum possible number. A given array or other
