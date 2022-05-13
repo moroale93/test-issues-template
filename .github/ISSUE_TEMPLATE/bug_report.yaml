@@ -52,17 +52,12 @@ body:
           where possible.
 
   - type: textarea
-      id: standard
-      attributes:
-      
-      
-  - type: textarea
     id: standard
     attributes:
-        label: Proposed standard text
-        placeholder: Enter your proposed standard text here
+      label: Proposed standard text
+      placeholder: Enter your proposed standard text here
     validations:
-        required: true
+      required: true
 
   - type: markdown
     attributes:
@@ -121,16 +116,16 @@ body:
           if possible.
 
   - type: textarea
-      id: enforcement
-      attributes:
-        label: Proposed enforcement text
-        placeholder: Enter your proposed enforcement text here
-      validations:
-        required: true
+    id: enforcement
+    attributes:
+      label: Proposed enforcement text
+      placeholder: Enter your proposed enforcement text here
+    validations:
+      required: true
 
   - type: markdown
-      attributes:
-        value: |
+    attributes:
+      value: |
           **Example:**
 
           A new lint rule that detects multiple iterations on the same symbol (variable)
@@ -150,16 +145,16 @@ body:
           here, or simply replace all this text with "N/A" if no shared code is proposed.
 
   - type: textarea
-      id: library
-      attributes:
-        label: Proposed shared code library text
-        placeholder: Enter your proposed shared code library text here
-      validations:
-        required: true
-
+    id: library
+    attributes:
+      label: Proposed shared code library text
+      placeholder: Enter your proposed shared code library text here
+    validations:
+      required: true
+ 
   - type: markdown
-      attributes:
-        value: |
+    attributes:
+      value: |
           **Example:**
 
           A set of new array utilities to be added to [@sm/utils](https://code.corp.surveymonkey.com/webplatform/smpackages/tree/master/packages/utils):
@@ -185,16 +180,16 @@ body:
           documentation platform and somehow disseminated throughout the organization.
 
   - type: textarea
-      id: library
-      attributes:
-        label: Proposed shared code library text
-        placeholder: Enter your proposed shared code library text here
-      validations:
-        required: true
+    id: library
+    attributes:
+      label: Proposed shared code library text
+      placeholder: Enter your proposed shared code library text here
+    validations:
+      required: true
 
   - type: markdown
-      attributes:
-        value: |
+    attributes:
+      value: |
           **Example:**
 
           - tutorial article/video in the [arrays section](http://insert-link.here) of the
