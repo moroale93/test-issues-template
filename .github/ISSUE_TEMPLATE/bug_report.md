@@ -1,5 +1,5 @@
 ---
-name: [MARKDOWN] Request for Comment (RFC) - Code Standards/Patterns
+name: MARKDOWN - Request for Comment (RFC) - Code Standards/Patterns
 about: Issue template for starting a code standards RFC
 title: '[RFC] - YOUR TITLE HERE'
 labels: 'RFC'
