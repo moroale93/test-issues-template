@@ -1,12 +1,11 @@
 ---
-name: Request for Comment (RFC) - Code Standards/Patterns Markdown
+name: Request for Comment (RFC) - Code Standards/Patterns
 about: Issue template for starting a code standards RFC
 title: '[RFC] - YOUR TITLE HERE'
 labels: 'RFC'
 assignees: '@frontend/standards'
 
 ---
-# RFC [YOUR TITLE HERE]
 
 ## Problem
 
