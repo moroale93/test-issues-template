@@ -27,8 +27,8 @@ body:
       required: true
 
   - type: markdown
-      attributes:
-        value: |
+    attributes:
+      value: |
           **Example:**
 
           JavaScript array convenience methods are being overused in the frontend
